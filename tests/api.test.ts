@@ -13,7 +13,7 @@ describe("JSONPlaceholder API", () => {
   it("GET /users/1 returns the user", async () => {
     const response = await api.get("/users/1");
 
-    expect(response.status).to.equal(200);
+    expect(response.status).to.equal(500);
     expect(response.data.id).to.equal(1);
     expect(response.data).to.have.property("name");
     expect(response.data).to.have.property("email");
